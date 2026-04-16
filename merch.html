@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOTHER JOHNSON // MERCH</title>
+  <meta name="description" content="Mother Johnson handmade merch - t-shirts, tote bags, lighters. All black. All handmade.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>&#x1f3b8;</text></svg>">
+</head>
+<body>
+
+  <!-- STAR FIELD -->
+  <div class="stars" id="stars"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html"><img src="assets/logo.jpeg" alt="Mother Johnson" class="nav-logo"></a>
+    <button class="nav-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Menu">///</button>
+    <ul>
+      <li><a href="index.html#music">Music</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#video">Video</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#shows">Shows</a></li>
+      <li><a href="merch.html" style="color: var(--purple-light); border-color: var(--purple);">Merch</a></li>
+      <li><a href="index.html#support">Support</a></li>
+    </ul>
+  </nav>
+
+  <!-- MERCH HERO -->
+  <section class="merch-page-hero">
+    <h1 class="section-title" style="font-size: clamp(42px, 6vw, 72px);">Merch</h1>
+    <div class="section-divider">// ======== HANDMADE BY THE BAND ======== //</div>
+    <p style="color: var(--white-dim); font-size: 14px; max-width: 550px; margin: 0 auto 20px;">
+      Every piece is handmade by us. Black on black. Mother Johnson logo on everything.
+      No factory runs, no middlemen. When it's gone, it's gone.
+    </p>
+    <p style="font-family: 'VT323', monospace; color: var(--purple-mid); font-size: 16px; letter-spacing: 3px;">
+      // TO ORDER: FILL OUT THE FORM BELOW OR EMAIL US DIRECTLY //
+    </p>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar" style="margin-top: 20px;">
+    <div class="marquee-content">
+      &#9733; HANDMADE &#9733; LIMITED QUANTITIES &#9733; ALL BLACK EVERYTHING &#9733; SCREEN PRINTED &#9733; SUPPORT INDEPENDENT MUSIC &#9733; HANDMADE &#9733; LIMITED QUANTITIES &#9733; ALL BLACK EVERYTHING &#9733; SCREEN PRINTED &#9733; SUPPORT INDEPENDENT MUSIC &#9733;
+    </div>
+  </div>
+
+  <!-- MERCH GRID -->
+  <section>
+    <div class="merch-full-grid">
+
+      <!-- T-SHIRT -->
+      <div class="merch-full-card">
+        <div class="merch-img-placeholder">
+          <div class="item-silhouette">&#128085;</div>
+          <img src="assets/logo.jpeg" alt="Mother Johnson Logo" class="merch-logo">
+        </div>
+        <div class="merch-details">
+          <h3>T-Shirt</h3>
+          <p class="merch-desc">100% cotton black tee with hand screen-printed Mother Johnson logo on front. Unisex fit.</p>
+          <span class="merch-tag">HANDMADE</span>
+          <span class="merch-tag">SCREEN PRINTED</span>
+          <span class="merch-tag">UNISEX</span>
+          <div class="merch-price">&euro;25</div>
+          <div class="size-select">
+            <label>SIZE:</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option selected>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+          </div>
+          <button class="order-btn" onclick="handleMerchOrder('T-Shirt', this)">&#9654; Add to Order</button>
+        </div>
+      </div>
+
+      <!-- TOTE BAG -->
+      <div class="merch-full-card">
+        <div class="merch-img-placeholder">
+          <div class="item-silhouette">&#128092;</div>
+          <img src="assets/logo.jpeg" alt="Mother Johnson Logo" class="merch-logo">
+        </div>
+        <div class="merch-details">
+          <h3>Tote Bag</h3>
+          <p class="merch-desc">Heavy-duty black canvas tote bag with printed Mother Johnson logo. Perfect for records, groceries, or whatever you carry around.</p>
+          <span class="merch-tag">HANDMADE</span>
+          <span class="merch-tag">HEAVY CANVAS</span>
+          <div class="merch-price">&euro;15</div>
+          <button class="order-btn" onclick="handleMerchOrder('Tote Bag', this)">&#9654; Add to Order</button>
+        </div>
+      </div>
+
+      <!-- LIGHTER -->
+      <div class="merch-full-card">
+        <div class="merch-img-placeholder">
+          <div class="item-silhouette">&#128293;</div>
+          <img src="assets/logo.jpeg" alt="Mother Johnson Logo" class="merch-logo">
+        </div>
+        <div class="merch-details">
+          <h3>Lighter</h3>
+          <p class="merch-desc">Black lighter with engraved Mother Johnson logo. Refillable. Light your way through the noise.</p>
+          <span class="merch-tag">ENGRAVED</span>
+          <span class="merch-tag">REFILLABLE</span>
+          <div class="merch-price">&euro;5</div>
+          <button class="order-btn" onclick="handleMerchOrder('Lighter', this)">&#9654; Add to Order</button>
+        </div>
+      </div>
+
+      <!-- CD -->
+      <div class="merch-full-card">
+        <div class="merch-img-placeholder">
+          <div class="item-silhouette">&#128191;</div>
+          <img src="assets/single-release.jpeg" alt="Single artwork" class="merch-logo" style="width: 160px;">
+        </div>
+        <div class="merch-details">
+          <h3>CD</h3>
+          <p class="merch-desc">Physical CD with printed sleeve art. Limited run, hand-numbered. Includes both tracks from the single.</p>
+          <span class="merch-tag">LIMITED</span>
+          <span class="merch-tag">HAND-NUMBERED</span>
+          <div class="merch-price">&euro;10</div>
+          <button class="order-btn" onclick="handleMerchOrder('CD', this)">&#9654; Add to Order</button>
+        </div>
+      </div>
+
+      <!-- VINYL -->
+      <div class="merch-full-card">
+        <div class="merch-img-placeholder">
+          <div class="item-silhouette">&#127926;</div>
+          <img src="assets/single-release.jpeg" alt="Single artwork" class="merch-logo" style="width: 160px;">
+        </div>
+        <div class="merch-details">
+          <h3>Vinyl LP</h3>
+          <p class="merch-desc">12" vinyl record. Heavyweight pressing on black wax. Full artwork sleeve.</p>
+          <span class="merch-tag">HEAVYWEIGHT</span>
+          <span class="merch-tag">BLACK WAX</span>
+          <div class="merch-price">&euro;20</div>
+          <button class="order-btn" onclick="handleMerchOrder('Vinyl LP', this)">&#9654; Add to Order</button>
+        </div>
+      </div>
+
+      <!-- BUNDLE -->
+      <div class="merch-full-card" style="border-color: var(--purple-mid);">
+        <div class="merch-img-placeholder" style="background: linear-gradient(135deg, var(--purple-dark), var(--black), var(--purple-dark));">
+          <div class="item-silhouette">&#9733;</div>
+          <img src="assets/logo.jpeg" alt="Mother Johnson Logo" class="merch-logo" style="width: 150px;">
+        </div>
+        <div class="merch-details">
+          <h3>Bundle Deal</h3>
+          <p class="merch-desc">T-Shirt + Tote Bag + Lighter + CD. The full Mother Johnson starter kit. Save &euro;10 on the bundle.</p>
+          <span class="merch-tag" style="border-color: var(--magenta); color: var(--magenta);">BEST VALUE</span>
+          <span class="merch-tag">SAVE &euro;10</span>
+          <div class="merch-price">&euro;45 <span style="font-size: 16px; color: var(--white-dim); text-decoration: line-through;">&euro;55</span></div>
+          <div class="size-select">
+            <label>TEE SIZE:</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option selected>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+          </div>
+          <button class="order-btn" style="border-color: var(--magenta);" onclick="handleMerchOrder('Bundle Deal', this)">&#9654; Add to Order</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section id="order-form" class="fade-in">
+    <h2 class="section-title">Order</h2>
+    <div class="section-divider">// ======== PLACE YOUR ORDER ======== //</div>
+
+    <div class="retro-box" style="max-width: 600px; margin: 0 auto;">
+      <p style="color: var(--white-dim); font-size: 13px; margin-bottom: 25px;">
+        Fill out the form below and we'll get back to you with payment details and shipping info. All orders are handled personally by the band.
+      </p>
+      <form id="merch-order-form" onsubmit="handleMerchSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" required placeholder="_______________">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label>Shipping Address</label>
+          <textarea name="address" required placeholder="Street, City, Postal Code, Country"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Items (we'll fill this in from your selections above)</label>
+          <textarea name="items" id="order-items" placeholder="e.g. T-Shirt (L) x1, Lighter x2, Vinyl LP x1"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea name="notes" placeholder="Anything else we should know?"></textarea>
+        </div>
+        <button type="submit" class="submit-btn" style="width: 100%;">&#9654; Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="marquee-bar">
+    <div class="marquee-content">
+      &#9830; MOTHER JOHNSON &#9830; HANDMADE MERCH &#9830; AMSTERDAM NL &#9830; SUPPORT INDEPENDENT MUSIC &#9830; MOTHER JOHNSON &#9830; HANDMADE MERCH &#9830; AMSTERDAM NL &#9830;
+    </div>
+  </div>
+
+  <footer>
+    <img src="assets/logo.jpeg" alt="Mother Johnson" class="footer-logo">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#music">Music</a>
+      <a href="index.html#shows">Shows</a>
+      <a href="index.html#support">Support</a>
+    </div>
+    <div class="visitor-counter">
+      VISITORS: <span id="visitor-count">000847</span>
+    </div>
+    <div class="footer-copy">&copy; 2025 Mother Johnson. All rights reserved.</div>
+  </footer>
+
+  <div class="under-construction">&#9888; UNDER CONSTRUCTION &#9888;</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
